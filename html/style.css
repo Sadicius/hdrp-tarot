@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+body { font-family: 'Oswald', sans-serif; overflow: hidden;}
+
+
+.cards {
+  display: none;
+  position: relative;
+  width: 20%;
+  height: 10vh;
+  top: 100%;
+  left: 10%;
+  border-radius: 0.5vh;
+}
+
+.scene {
+  position: absolute;
+  width: 22vh;
+  height: 28vh;
+  margin: 0vh 40vh;
+  perspective: 60vh;
+}
+
+.scene3 {
+  position: relative;
+  width: 22vh;
+  height: 28vh;
+  margin: -32vh 64vh;
+  perspective: 60vh;
+}
+
+.scene4 {
+  position: absolute;
+  width: 22vh;
+  height: 28vh;
+  margin: 4vh 88vh;
+  perspective: 60vh;
+}
+
+.scene2 {
+  position: relative;
+  width: 22vh;
+  height: 28vh;
+  margin: 4vh 16vh;
+  perspective: 60vh;
+}
+
+.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 26vh;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4vh;
+  backface-visibility: hidden;
+  border-radius: 0.5vh;
+}
+
+.card__face--front {
+  border-radius: 0.5vh;
+  scale: 0.50;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.card,
+.card2,
+.card3,
+.card4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  border-radius: 0.5vh;
+}
+
+#myImg,
+#myImg2,
+#myImg3,
+#myImg4 {
+  width: 22vh;
+  height: 28vh;
+  border-radius: 0.5vh;
+}
+
+/* NUEVA PARTE */
+
+#cardContainer {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 150vh;
+  z-index: 10;
+}
+
+#cardImage {
+  width: 55vh;
+  height: 70vh;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
